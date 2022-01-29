@@ -1,0 +1,16 @@
+- hosts: group1
+
+  tasks:
+  - name: echo実行
+    command: >-
+      {%- if key == 'A' -%}   echo "Aです"
+      {%- elif key == 'B' -%} echo "Bです"
+      {%- else -%}            echo "引数が正しくありません"
+      {%- endif -%}
+    register: command_result
+ 
+  - name: echo結果確認
+    debug:
+      msg: "{{ command_result.stdout }}"
+
+
