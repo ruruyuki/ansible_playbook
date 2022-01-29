@@ -1,0 +1,16 @@
+- hosts: group1
+
+  tasks:
+  - name: echo実行A
+    command: echo "引数にAが設定されています"
+    register: command_result
+    when: key == "A"
+  - name: echo実行B
+    command: echo "引数にBが設定されています"
+    register: command_result
+    when: key == "B"
+  - name: 結果確認
+    debug:
+      msg: "{{ command_result.stdout }}"
+
+

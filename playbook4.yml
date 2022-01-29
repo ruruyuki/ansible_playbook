@@ -1,0 +1,9 @@
+- hosts: group1
+
+  tasks:
+  - name: echo_task
+    command: echo "{{ arg1 }}"
+    register: command_result
+  - name: result
+    debug:
+      msg: "{{ command_result.stdout }}"

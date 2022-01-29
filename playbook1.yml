@@ -1,0 +1,10 @@
+- hosts: group1
+
+  tasks:
+  - name: ping
+    ping:
+    register: result
+
+  - name: ping-result
+    debug: 
+      msg: "{{ result }}"

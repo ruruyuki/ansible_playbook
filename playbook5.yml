@@ -1,0 +1,11 @@
+- hosts: group1
+
+  tasks:
+  - name: echo_task
+    command: echo "引数にAが設定されています"
+    register: command_result
+    when: "'A' == '{{ arg1 }}'"
+
+  - name: result
+    debug:
+      msg: "{{ command_result.stdout }}"

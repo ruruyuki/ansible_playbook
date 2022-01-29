@@ -1,0 +1,11 @@
+- hosts: group1
+
+  tasks:
+  - name: stat
+    stat:
+      path: /home/centos
+    register: result
+
+  - name: stat-result
+    debug: 
+      msg: "{{ result.stat.islnk }}"

@@ -1,0 +1,12 @@
+- hosts: group1
+
+  become: yes
+  tasks:
+  - name: mkdir_job
+    file:
+      path: "/home/centos/test/dir2/dir3"
+      state: directory
+      owner: "root"
+      group: "root"
+      mode: "744"
+      recurse: yes
