@@ -1,0 +1,9 @@
+- hosts: group1
+
+  tasks:
+  - name: tar.gzファイルをローカルからサーバーへ転送した後、展開する
+    unarchive:
+      src=/Users/user/ansible_work/test.tar.gz
+      dest=/home/centos/work
+
+
