@@ -5,9 +5,9 @@ import "fmt"
 func main() {
 
 	idList := [...]map[string]string{
-		{"ID": "1", "AID": "c1", "BID": "b1"},
-		{"ID": "2", "AID": "c2", "BID": "b2"},
-		{"ID": "3", "AID": "c3", "BID": "b3"},
+		{"ID": "1", "AID": "c1", "BID": "d1"},
+		{"ID": "2", "AID": "c2", "BID": "d2"},
+		{"ID": "3", "AID": "c3", "BID": "d3"},
 	}
 
 	mapList := []map[string]string{}
